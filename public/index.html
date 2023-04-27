@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script type="text/javascript" src="javascript/container.js" defer></script>
+    <title>The Debuuger</title>
+</head>
+
+<body>
+
+    <video autoplay muted loop id="myVideo"> 
+        <source src="assets/mylivewallpapers.com-Matrix.mp4" type="video/mp4">
+    </video>
+
+    <h2> PRUEBA SIGN UP AND LOG IN</h2>
+    <!--Todo el rectangulo de en medio-->
+    <div class="container" id="container">
+        <!--Espacio para resgistro-->
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Registrarse</h1>
+                <!--Redes sociales-->
+                <div class="social-container">
+                    <a href="#" class="social">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social">
+                        <i class="fab fa-google-plus-g"></i>  
+                    </a>
+                    <a href="#" class="social">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <!--Usar correo-->
+                <span> O usa tu correo para registrarte</span>
+                <input type="text" placeholder="Nombre"/>
+                <input type="text" placeholder="Username"/>
+                <input type="text" placeholder="Fecha de nacimiento"/>
+                <input type="text" placeholder="País"/>
+                <input type="email" placeholder="Correo electronico"/>
+                <input type="password" placeholder="Contraseña"/>
+                <button id="enviarboton"> Registrarse</button>
+            </form>
+        </div>
+        <!--Espacio para iniciar sesion-->
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Iniciar sesión</h1>
+                <div class="social-container">
+                    <a href="#" class="social">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social">
+                        <i class="fab fa-google-plus-g"></i>  
+                    </a>
+                    <a href="#" class="social">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <span> O usa tu cuenta</span>
+                <input type="email" placeholder="Correo electronico"/>
+                <input type="password" placeholder="Contraseña"/>
+                <a href="#">Olvide mi contraseña</a>
+                <a href="admin.html">Cuenta de administrador</a>
+                <button> Iniciar Sesión</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Bienvenido de vuelta</h1>
+                    <p>Por favor ingresa los datos correspondientes</p>
+                    <button class="ghost" id="signIn">Iniciar sesion</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>¡Bienvenido, amigo!</h1>
+                    <p>Ingresa tus datos para iniciar tu aventura</p>
+                    <button class="ghost" id="signUp">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <!--Insertar logo del Tec-->
+        <p>Realizado por equipo 5. TC204.402<br>
+        Copyright ® 2023 Tecnologico de Monterrey, Inc.<br>
+        <a target="blank" href=""> Informacion legal</a> 
+        |
+        <a target="blank" href=""> Política de privacidad</a> 
+        </p>
+    </footer>
+
+
+</body>
+
+</html>
+
