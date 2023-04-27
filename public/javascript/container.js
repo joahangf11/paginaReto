@@ -13,3 +13,22 @@ signInButton.addEventListener('click', () => {
 enviarboton.addEventListener('click', () => {
 	console.log("enviado");
 });
+
+function saveData(){
+	const payLoad = JSON.stringify({
+		nombre: campoNombre.value,
+        username: campoUser.value,
+		fecha: campoFecha.value,
+		pais: campoPais.value,
+        correo: campoCorreo.value,
+        password: campoPassword.value
+	});
+	const xhr = new XMLHttpRequest();
+	// xhr.onload = () => {
+	// 	result.innerText = xhr.responseText;	
+    // };
+	xhr.open('POST','/signin');
+	xhr.setRequestHeader('Content-Type', 'application/json');
+	xhr.send(payLoad);
+}
+

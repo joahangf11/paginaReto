@@ -16,8 +16,6 @@
     <video autoplay muted loop id="myVideo"> 
         <source src="assets/mylivewallpapers.com-Matrix.mp4" type="video/mp4">
     </video>
-
-    <h2> PRUEBA SIGN UP AND LOG IN</h2>
     <!--Todo el rectangulo de en medio-->
     <div class="container" id="container">
         <!--Espacio para resgistro-->
@@ -38,13 +36,13 @@
                 </div>
                 <!--Usar correo-->
                 <span> O usa tu correo para registrarte</span>
-                <input type="text" placeholder="Nombre"/>
-                <input type="text" placeholder="Username"/>
-                <input type="text" placeholder="Fecha de nacimiento"/>
-                <input type="text" placeholder="País"/>
-                <input type="email" placeholder="Correo electronico"/>
-                <input type="password" placeholder="Contraseña"/>
-                <button id="enviarboton"> Registrarse</button>
+                <input id="campoNombre" type="text" placeholder="Nombre"/>
+                <input id="campoUser" type="text" placeholder="Username"/>
+                <input id="campoFecha" type="text" placeholder="Fecha de nacimiento"/>
+                <input id="campoPais" type="text" placeholder="País"/>
+                <input id="campoCorreo" type="email" placeholder="Correo electronico"/>
+                <input id="campoPassword" type="password" placeholder="Contraseña"/>
+                <button id="enviarboton" onclick="saveData();"> Registrarse</button>
             </form>
         </div>
         <!--Espacio para iniciar sesion-->
