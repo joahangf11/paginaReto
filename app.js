@@ -1,10 +1,7 @@
 const express = require('express');
 const mssql = require('mssql');
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 const ipAddr = 'debuggergame.com';
-
-const bcrypt = require('bcrypt');
-const saltRounds = 3;
 
 const app = express();
 app.use(express.static(__dirname + '/public'));
