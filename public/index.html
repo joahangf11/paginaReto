@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script type="text/javascript" src="javascript/container.js" defer></script>
     <title>The Debuuger</title>
@@ -36,13 +37,43 @@
                 </div>
                 <!--Usar correo-->
                 <span> O usa tu correo para registrarte</span>
-                <input id="campoNombre" type="text" placeholder="Nombre"/>
-                <input id="campoUser" type="text" placeholder="Username"/>
-                <input id="campoFecha" type="text" placeholder="Fecha de nacimiento"/>
-                <input id="campoPais" type="text" placeholder="País"/>
+                <input id="campoUser" type="text" placeholder="Username" pattern="[A-Za-z]{3}" title="Three letter country code"/>
+                <input id="campoFecha" type="date" title="Seleccione su fecha de nacimiento"/>
+                <select name="pais" id="campoPais" placeholder="País">
+                    <option value="" disabled selected>Selecciona un país</option>   
+                    <option value="Argentina">Argentina</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Canadá">Canadá</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Costa Rica">Costa Rica</option>
+                    <option value="Cuba">Cuba</option>
+                    <option value="República Dominicana">República Dominicana</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="España">España</option>
+                    <option value="Reino Unido">Reino Unido</option>
+                    <option value="El Salvador">El Salvador</option>
+                    <option value="Estados Unidos">Estados Unidos</option>
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="Honduras">Honduras</option>
+                    <option value="Jamaica">Jamaica</option>
+                    <option value="México">México</option>
+                    <option value="Nicaragua">Nicaragua</option>
+                    <option value="Perú">Perú</option>
+                    <option value="Panamá">Panamá</option>
+                    <option value="Venezuela">Venezuela</option>
+                </select>
                 <input id="campoCorreo" type="email" placeholder="Correo electronico"/>
                 <input id="campoPassword" type="password" placeholder="Contraseña"/>
-                <button id="enviarboton" onclick="saveData();"> Registrarse</button>
+                <!-- <input type="submit"/> -->
+                <label>
+                    <div class="terms-and-conditions">
+                        <input type="checkbox" id="terms-checkbox"> 
+                        <label for="terms-checkbox">He leído y acepto los términos y condiciones</label>
+                    </div>
+                </label>
+                <button type="submit" id="enviarboton" onclick="saveData();" > Registrarse</button>
             </form>
         </div>
         <!--Espacio para iniciar sesion-->
@@ -53,25 +84,26 @@
                     <a href="#" class="social">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="#" class="social">
-                        <i class="fab fa-google-plus-g"></i>  
+                    <a href="#" class="social"> 
+                        <i class="fab fa-google-plus-g" style:"color: #2c1376;"></i>  
                     </a>
                     <a href="#" class="social">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
                 <span> O usa tu cuenta</span>
-                <input type="email" placeholder="Correo electronico"/>
-                <input type="password" placeholder="Contraseña"/>
+                <input id="inicioNombre" type="text" placeholder="Nombre de usuario"/>
+                <input id="inicioPassword" type="password" placeholder="Contraseña"/>
                 <a href="#">Olvide mi contraseña</a>
                 <a href="admin.html">Cuenta de administrador</a>
-                <button> Iniciar Sesión</button>
+                <h3 id="datosEquivocadosIn">¡El nombre de usuario o contraseña son incorrectos!</h3>
+                <button onclick="iniciarSesion();"> Iniciar Sesión</button>
             </form>
         </div>
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
-                    <h1>Bienvenido de vuelta</h1>
+                    <h1>¡Bienvenido de vuelta!</h1>
                     <p>Por favor ingresa los datos correspondientes</p>
                     <button class="ghost" id="signIn">Iniciar sesion</button>
                 </div>
@@ -88,9 +120,9 @@
         <!--Insertar logo del Tec-->
         <p>Realizado por equipo 5. TC204.402<br>
         Copyright ® 2023 Tecnologico de Monterrey, Inc.<br>
-        <a target="blank" href=""> Informacion legal</a> 
+        <a target="blank" href="tercon.html"> Informacion legal</a> 
         |
-        <a target="blank" href=""> Política de privacidad</a> 
+        <a target="blank" href="popri.html"> Política de privacidad</a> 
         </p>
     </footer>
 

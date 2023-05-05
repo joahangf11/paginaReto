@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Bruno';
+    src: url('public/fonts/BrunoAceSC-Regular.ttf');    
+  }
+
+  h1 {
+    font-family: 'Bruno', sans-serif;
+    font-size: 100px;
+  }
+.subtitle{
+    font-weight: bold;
+}
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding-right: 50px;
+    padding-left: 40px;
+}

@@ -7,7 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/styleadmin.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <title>The Debuuger</title> 
+        <script type="text/javascript" src="javascript/admin.js" defer></script>
+        <title>The Debuuger Admin</title> 
     </head>
 
     <body>
@@ -16,9 +17,9 @@
                 <form action="#">
                     <h1>Cuenta de administrador</h1>
                     <span> Ingresa los datos</span>
-                    <input type="email" placeholder="Correo electronico"/>
-                    <input type="password" placeholder="Contraseña"/>
-                    <button onclick="location.href='https://public.tableau.com/app/profile/joahan.javier.garcia.fernandez/viz/PruebaVentas_16823536745920/Dashboard1?publish=yes'" type="button"> Iniciar sesión</button>
+                    <input id="inicioCorreo" type="email" placeholder="Correo electronico"/>
+                    <input id="inicioPassword" type="password" placeholder="Contraseña"/>
+                    <button onclick="iniciarSesion();"> Iniciar sesión</button>
                 </form>
             </div>
             <div class="overlay-container">

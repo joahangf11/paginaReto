@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Bruno';
+    src: url('fonts/BrunoAceSC-Regular.ttf');    
+  }
+  h1 {
+    font-family: 'Bruno', sans-serif;
+    font-size: 100px;
+  }
+
+  h3 {
+      background-color: #3333cc;
+      font-family: 'Orbitron', sans-serif;
+      src: url('https://fonts.googleapis.com/css?family=Orbitron');
+      font-size: 80px;
+  }
+  p {
+      background-color: #5900b3;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 24px;
+  }
+  body {
+      background-color: #8000ff;/*Inserción de un color personalizado con el uso del código hexadecimal*/
+  }
+  .w3-border-blue {
+      border: 10px;
+  }
+
+  a {
+      background-color: darkmagenta;
+      font-family: 'Zekton', sans-serif;
+      src: url('fonts/zekton free.ttf');
+  }
+
+  .historia{
+    display: block;
+  }
+
+  button.active{
+      background-color: rgb(114, 4, 114);
+  }
