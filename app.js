@@ -1,7 +1,7 @@
 const express = require('express');
 const mssql = require('mssql');
-const port = 3000;
-const ipAddr = 'localhost';
+const port = process.env.PORT || 3000;
+const ipAddr = 'debuggergame.com';
 
 const bcrypt = require('bcrypt');
 const saltRounds = 3;
@@ -183,10 +183,10 @@ app.use((req, res) => {
     res.type('text/plain').status(404).send('404 - Not Found');
   });
   
-// app.listen(port, () => console.log(
-//   `Express started on http://${ipAddr}:${port}`
-//   + '\nPress Ctrl-C to terminate.'
-//   ));
+app.listen(port, () => console.log(
+  `Express started on http://${ipAddr}:${port}`
+  + '\nPress Ctrl-C to terminate.'
+  ));
 
 
 
